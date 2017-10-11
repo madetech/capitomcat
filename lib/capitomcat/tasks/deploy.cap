@@ -158,6 +158,7 @@ namespace :capitomcat do
 
   # Stop Tomcat server
   def stop_tomcat
+    execute_tomcat_cmd('restart')
     execute_tomcat_cmd('stop')
   end
 
