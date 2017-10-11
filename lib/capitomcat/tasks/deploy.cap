@@ -153,7 +153,7 @@ namespace :capitomcat do
   end
 
   def check_tomcat_responding
-    test("curl -I 'http://127.0.0.1:#{fetch(:tomcat_port)}' > /dev/null")
+    test("curl --silent -I 'http://127.0.0.1:#{fetch(:tomcat_port)}' > /dev/null")
   end
 
   # Stop Tomcat server
